@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 100%;
+	min-width: 320px;
+}
+
+.wrap {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}

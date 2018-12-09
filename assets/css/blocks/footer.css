@@ -1,0 +1,13 @@
+.footer {
+	display: flex;
+	width: 100%;
+	margin: 120px auto;
+	padding-top: 60px;
+	border-top: 1px solid grey;
+}
+
+.footer__widgets aside.block_one {
+	border: 1px solid red;
+	justify-content: end;
+	width: 30%;
+}
