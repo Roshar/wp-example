@@ -9,9 +9,15 @@
 		register_nav_menu('top','Вверхнее меню');
 	});
 
-	// add_action('wp_head', function() {
-	// 	echo "sdsdd";
-	// });
+	//добавление возможности вставки в статьи миниатюру
+	add_action('after_setup_theme', function(){
+		add_theme_support('post-thumbnails');
+	});
+
+	//добовляет возможность отображать в теге title название каждой страницы
+	add_action('after_setup_theme', function(){
+		add_theme_support('title-tag');
+	});
 
 	add_action('wp_enqueue_scripts', function () {
 		wp_enqueue_style('test-main', get_stylesheet_uri());
@@ -23,7 +29,11 @@
 	register_sidebar([
 		'name' => 'Sidebar Right',
 		'id' => 'my-sidebar',
-		'description' => 'Правая колонка'
+		'description' => 'Правая колонка',
+		'before_widget' => null,
+		'after_widget'  => null,
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => "</h2>\n",
 		]);
 	});
 

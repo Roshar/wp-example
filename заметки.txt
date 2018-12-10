@@ -1,0 +1,7 @@
+
+add_action('after_setup_theme', function() {
+	//добавление возможности вставки миниатюры в  статью
+	add_theme_support('post-thumbnails');
+	// добавляет возможность именовать страницу в теге title (автоматически добавляет тег title )
+	add_theme_support('title-tag')
+})
